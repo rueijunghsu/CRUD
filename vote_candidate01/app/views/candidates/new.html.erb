@@ -1,31 +1,6 @@
 <h1>新增後選人</h1>
 
-<%= form_for(@candidate) do |f| %>
-<div>
-  <%= f.label :name, "姓名" %>
-  <%= f.text_field :name %>
-</div>
-
-<div>
-  <%= f.label :age, "年齡" %>
-  <%= f.text_field :age %>
-</div>
-
-<div>
-  <%= f.label :party, "黨派" %>
-  <%= f.text_field :party %>
-</div>
-
-<div>
-  <%= f.label :politics, "政見" %>
-  <%= f.text_area :politics %>
-</div>
-
-<div>
-  <%= f.submit %>
-</div>
-<% end %>
+<%= render "form", candidate: @candidate %>
 
 <br>
-
 <%= link_to "回候選人列表", candidates_path %>
